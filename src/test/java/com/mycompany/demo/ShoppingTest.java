@@ -8,6 +8,9 @@ public class ShoppingTest {
     public void beforeClass(){
         System.out.println("Before ShoppingTests class is executed");
     }
+    public void afterClass(){
+        System.out.println("After ShoppingTest class is executed");
+    }
 
     @Test
     public void productSearch(){
