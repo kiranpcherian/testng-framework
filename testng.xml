@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="MyShopTestSuite" verbose="1" >
-    <test name="Tests in Chrome" >
+<suite name="MyShopTestSuite" verbose="1" parallel="tests">
+    <test name="Tests in WindowsChrome" >
         <parameter name="browser" value="chrome"></parameter>
         <parameter name="os" value="windows"></parameter>
         <classes>
@@ -9,5 +9,12 @@
             <class name="com.mycompany.demo.ShoppingTest"></class>
         </classes>
     </test>
-
+    <test name="Tests in OSx-firefox" >
+        <parameter name="browser" value="firefox"></parameter>
+        <parameter name="os" value="osx"></parameter>
+        <classes>
+            <class name="com.mycompany.demo.LoginTests" />
+            <class name="com.mycompany.demo.ShoppingTest"></class>
+        </classes>
+    </test>
 </suite>
